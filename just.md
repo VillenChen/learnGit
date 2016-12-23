@@ -26,7 +26,7 @@
 + 就是你在电脑里能看到的目录，比如learngit文件夹就是一个工作区
 
 ###### b.版本库（Repository）
-+ 版本库(Repository):.git文件夹
++ 版本库(Repository):`.git`文件夹
 ![git的版本库](git.jpg)
 + 把文件往Git版本库里添加的时候，是分两步执行的：
 第一步是用`git add`把文件添加进去，实际上就是把文件修改添加到暂存区；
@@ -44,4 +44,8 @@
 + `cat file` 查看文本的内容
 + `git reset HEAD file` 可以把暂存区的修改撤销掉(unstage),重新放回工作区,再用`git checkout -- file` 来把工作区的内容删除
 + `git reset` 既可以回退版本,也可以把暂存区的修改回退到工作区。当我们用`HEAD`时，表示最新的版本。
-+
++ `rm file` 命令删除文件
+    * a.`git rm file`+`git commit` 文件就从版本库中被删除了(确实要从版本库中删除该文件)。
+    * b.`git checkout -- file` 删错了,因为版本库里还有,所以可以很轻松地把误删的文件恢复到最新版本,`git checkout`其实是用版本库里的版本替换工作区的版本,无论工作区是修改还是删除,都可以“一键还原”。
+
+
